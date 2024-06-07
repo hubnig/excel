@@ -1,0 +1,57 @@
+$black: #232323;
+$gray-line: #f6f6f6;
+$background: #7f52f7;
+$orange: #4ecb4a;
+
+$container-width: 90%;
+
+$duration: 0.15s;
+@import url('https://fonts.googleapis.com/css2?family=Seymour+One&display=swap');
+
+.header {
+	border-bottom: 1px solid $gray-line;
+	padding: 40px 0;
+
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.header__desc {
+      font-size: 30px;
+			font-family: 'Seymour One', sans-serif;
+			font-weight: 400;
+			font-style: normal;
+		}
+		@media (max-width: 800px) {
+			flex-direction: column;
+
+			.header__cart {
+				margin-top: 20px;
+			}
+		}
+	}
+
+	&__logo {
+		display: flex;
+
+		img {
+			margin-right: 15px;
+		}
+
+		h1 {
+			color: #181818;
+			font-size: 24px;
+			letter-spacing: 1%;
+			text-transform: uppercase;
+			font-weight: 800;
+		}
+
+		p {
+			color: #7b7b7b;
+		}
+
+		@media (max-width: 800px) {
+			margin-bottom: 20px;
+		}
+	}
+}
