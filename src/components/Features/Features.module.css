@@ -7,7 +7,7 @@
   }
 }
 .highlight {
-  background-color: #95be9c !important;
+  background: #95be9c !important;
 }
 .description {
   max-width: rem(600px);

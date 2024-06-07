@@ -8,7 +8,7 @@ import {
 	Container,
 	rem
 } from '@mantine/core'
-import { IconGauge, IconUser, IconCookie, Icon24Hours, IconArrowsJoin } from '@tabler/icons-react'
+import { IconGauge, IconUser, IconCookie, Icon24Hours, IconArrowsJoin, IconGraph } from '@tabler/icons-react'
 import classes from './Features.module.css'
 
 const mockdata = [
@@ -41,6 +41,12 @@ const mockdata = [
 		description:
 			'Настройте приложение под свои потребности, выбирая предпочтительные настройки, настраивая шаблоны отчетов и адаптируя интерфейс для максимального комфорта и удобства работы.',
 		icon: IconArrowsJoin,
+	},
+	{
+		title: 'Умный анализ данных',
+		description:
+			'Ваше приложение оснащено мощными алгоритмами анализа данных, которые помогут вам получить ценные инсайты и обнаружить скрытые паттерны в объединенных файлах Excel. Принимайте обоснованные решения на основе фактических данных.',
+		icon: IconGraph,
 	},
 ]
 
