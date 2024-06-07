@@ -8,7 +8,7 @@ import {
 	Container,
 	rem
 } from '@mantine/core'
-import { IconGauge, IconUser, IconCookie, Icon24Hours, IconArrowsJoin, IconGraph } from '@tabler/icons-react'
+import { IconGauge, IconCookie, Icon24Hours, IconArrowsJoin, IconGraph, IconBrandUnity } from '@tabler/icons-react'
 import classes from './Features.module.css'
 
 const mockdata = [
@@ -16,13 +16,13 @@ const mockdata = [
 		title: 'Объединение файлов Excel',
 		description:
 			'Объединяйте несколько файлов Excel в один, чтобы создать единый исчерпывающий набор данных для анализа и отчетности.',
-		icon: IconGauge,
+		icon: IconBrandUnity
 	},
 	{
 		title: 'Быстрая редакция',
 		description:
 			'Редактируйте данные ваших файлов Excel непосредственно в приложении с помощью удобных инструментов и функций, что позволяет сэкономить время и повысить эффективность работы.',
-		icon: IconUser,
+		icon: IconGauge,
 	},
 	{
 		title: 'Составление отчетов',
