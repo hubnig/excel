@@ -6,17 +6,16 @@ import {
 	Card,
 	SimpleGrid,
 	Container,
-	rem,
-	useMantineTheme,
+	rem
 } from '@mantine/core'
-import { IconGauge, IconUser, IconCookie, Icon24Hours, Icon3dCubeSphere } from '@tabler/icons-react'
+import { IconGauge, IconUser, IconCookie, Icon24Hours, IconArrowsJoin } from '@tabler/icons-react'
 import classes from './Features.module.css'
 
 const mockdata = [
 	{
 		title: 'Объединение файлов Excel',
 		description:
-			'Объединяйте несколько файлов Excel в один, чтобы создать единый исчерпывающий набор данных для анализа и отчетности',
+			'Объединяйте несколько файлов Excel в один, чтобы создать единый исчерпывающий набор данных для анализа и отчетности.',
 		icon: IconGauge,
 	},
 	{
@@ -41,12 +40,11 @@ const mockdata = [
 		title: 'Персонализация и гибкость',
 		description:
 			'Настройте приложение под свои потребности, выбирая предпочтительные настройки, настраивая шаблоны отчетов и адаптируя интерфейс для максимального комфорта и удобства работы.',
-		icon: Icon3dCubeSphere,
+		icon: IconArrowsJoin,
 	},
 ]
 
 export function Features() {
-	const theme = useMantineTheme()
 	const features = mockdata.map(feature => (
 		<Card
 			key={feature.title}
@@ -58,7 +56,7 @@ export function Features() {
 			<feature.icon
 				style={{ width: rem(50), height: rem(50) }}
 				stroke={2}
-				color={theme.colors.blue[6]}
+				color={'#95be9c'}
 			/>
 			<Text fz='lg' fw={500} className={classes.cardTitle} mt='md'>
 				{feature.title}
@@ -76,17 +74,14 @@ export function Features() {
 					Best company ever
 				</Badge>
 			</Group>
-
 			<Title order={2} className={classes.title} ta='center' mt='sm'>
 				Простая интеграция с любым технологическим стеком
 			</Title>
-
 			<Text c='dimmed' className={classes.description} ta='center' mt='md'>
 				Время от времени вы увидите Голбата, у которого не хватает нескольких
 				клыков. Это происходит, когда голод заставляет его попытаться укусить
 				покемона Стального типа.
 			</Text>
-
 			<SimpleGrid cols={{ base: 1, md: 3 }} spacing='xl' mt={50}>
 				{features}
 			</SimpleGrid>

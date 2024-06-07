@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 
-import { Title, Text, Button, Container } from '@mantine/core'
+import { Button, Container, Text, Title } from '@mantine/core'
 import { Dots } from './Dots'
 import classes from './Hero.module.css'
 
@@ -53,7 +53,7 @@ export function HeroText() {
 						Посмотреть демо
 					</Button>
 					<Button className={classes.control} size='lg'>
-						Купить лицензию
+						<a href='https://t.me/DZOIV'>Купить лицензию</a>
 					</Button>
 				</div>
 			</div>
