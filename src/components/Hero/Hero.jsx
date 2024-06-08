@@ -10,7 +10,7 @@ export function HeroText() {
 	const handleScroll = () => {
 		if (scrollRef.current) {
 			const scrollOptions = {
-				top: scrollRef.current.offsetTop + 400,
+				top: scrollRef.current.offsetTop + 800,
 				behavior: 'smooth',
 			}
 			window.scrollTo(scrollOptions)

@@ -102,7 +102,7 @@ function ExcelMerger() {
 
   return (
     <div className='excel-merger'>
-      <div>
+      <div className='inputs'>
         <input
           className='file-input button'
           type='file'
