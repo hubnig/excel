@@ -3,16 +3,19 @@ import './Header.scss'
 import logoSvg from './logo.svg'
 
 export default function Header() {
-	const [timer, setTimer] = useState({
+	const initialTimerState = {
 		days: 27,
 		hours: 21,
 		minutes: 0,
 		seconds: 0,
-	})
+	}
+
+	const [timer, setTimer] = useState(
+		JSON.parse(localStorage.getItem('timer')) || initialTimerState,
+	)
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-			// Уменьшаем таймер на одну секунду
 			setTimer(prevTimer => {
 				const updatedTimer = { ...prevTimer }
 				if (updatedTimer.seconds > 0) {
@@ -45,6 +48,10 @@ export default function Header() {
 		}
 	}, [])
 
+	useEffect(() => {
+		localStorage.setItem('timer', JSON.stringify(timer))
+	}, [timer])
+
 	return (
 		<div className='header'>
 			<div className='container'>
@@ -58,12 +65,10 @@ export default function Header() {
 					</div>
 				</a>
 				<div className='header__desc'>
-					Innovation
-					<br />
+					Innovation <br />
 					<span>
-						{' '}
-						до релиза приложения - {timer.days} дней {timer.hours} часов {timer.minutes}{' '}
-						минут {timer.seconds} секунд
+						до релиза - {timer.days} дней, {timer.hours} часов, {timer.minutes}{' '}
+						минут, {timer.seconds} секунд
 					</span>
 				</div>
 			</div>
